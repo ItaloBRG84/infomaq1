@@ -1,114 +1,178 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INFO MAQ.SOLDA WEB</title>
-    <link rel="stylesheet" href="style.maq.css">
+  <meta charset="UTF-8">
+  <title>Slider com 3 Divs</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+      
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.4s ease-in-out;
+      width: 100%; /* 100% x 3 slides */
+      height: auto;
+    }
+
+    .slide {
+      width: 100%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: white;
+    }
+    .div-left{
+        width: 50%;
+        color:black ;
+
+
+    }
+    .div-left img{
+        width: 100%;
+        height: auto;
+    }
+    .div-left p{
+        width: 80%;
+        margin: 15px;
+    }
+    .div-left h1{
+        margin: 15px;
+    }
+    .div-rigth{
+        width: 50%;
+        color: black;
+        
+    }
+    
+    .slide1 { background-color: #ffffff; }
+    .slide2 { background-color: #2ecc71; }
+    .slide3 { background-color: #ffffff; }
+
+    .buttons {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: white;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
-<div> <h2>Feito por Italo Braga</h2>
-<h3>Estágiario técnico de elétrica</h3></div>
-    <div class="imgback">
-        <div class="divback">
-                
-            <div> 
-                
-                <h1>Informação geral obtida Maquinas de solda modelos E e M</h1>
-                
-                <h3>Introdução</h3>
-                <div class="divparagrafo">
-                    <p>
-                    Soldagem por resistência é um processo de união de chapas metálicas ou arames, sem adição de metal. <br>
-                    A corrente elétrica que circula entre as peças metálicas colocadas sobrepostas ou a topo, e a resistência de 
-                    contato de suas superfícies são utilizadas como fonte de calor (Efeito Joule) até a temperatura de 
-                    caldeamento, e o processo é complementado ao aplicar-se uma pressão. <br>
-                    É utilizado na maioria das indústrias, entre elas: a automotiva, metalúrgicas em geral e indústria 
-                    aeroespacial. Tendo sido inventada por Elihu Thomson em 1877, que aplicou esse processo de soldagem 
-                    para unir fios de cobre. Logo percebeu que esta técnica poderia ser usada para a soldagem de outros 
-                    materiais. <br>
-                    A soldagem por resistência tem crescido enormemente, tendo como, por exemplo, a Schlatter, uma das 
-                    mais conceituadas neste seguimento, que foi fundada em 1916 por Hans A. Schlatter.</p> 
-                    <a href="docs/Apostila Solda por Resistência a Topo - Curso A - 2023 - Máquina E e M.pdf" target="_blank"><button>APOSTILA DE SOLDA POR RESISTENCIA</button></a>
-                    <h3> Vídeo demonstrativo de funcionamento abaixo </h3>
-                    <div>
-                        <video width="600" controls autoplay src="images/vid1.mp4"> 
-                            <source src="images/vid1.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
 
-            </div>
-                        
-                <div>
-                       <h3>Imagem máquina de solda modelo M explodida </h3> 
-                    <img src="images/Mexp.jpg" alt="" class="eploM">  
-                    <h3>Maquina de solda SCHLATTER modelo M</h3>
-                    <a href="docs/Manual Mod M original.pdf" target="_blank"><button>DOCUMENTO PDF MAQ.SOLDA MOD M</button> </a>
-                    <div>
-                        <ul> 
-                            <h3> Utilização dentro da Trefilaria</h3>
-                            <li> 1 und. payoff LF01 </li>
-                            <li> 1 und. payoff LF02 </li>
-                            <li> 1 und. payoff LF04 </li>
-                            <li> 1 und. payoff LPP </li>
-                            <li> 1 und. payoff BRE </li>
-                            <li> 1 und. payoff ATT02 </li>
-                            <li> 1 und. payoff TELA MEP </li>
-                        </ul>   
-                        <a href="peca_MODM.html" target="_blank">
-                            <button>CODIGOS DE PEÇAS SAP MOD M</button>
-                        </a>
-                    </div> 
-                </div>
-            <div>
-                <h3>Imagem máquina de solda modelo E explodida </h3>
-                <img src="images/Eexp.jpg" alt="" class="exploE">  
-                <h3>Maquina de solda SCHLATTER modelo E</h3>
-                <a href="docs/modelo_e_portugues_1207.pdf" target="_blank"><button>DOCUMENTO PDF MAQ.SOLDA MOD E</button> </a>
-                    <div>
-                        <ul> <h4> Utilização dentro da Trefilaria</h4>
-                            <li> 1 und. ENTRE LF01 E LF02 </li>
-                            <li> 1 und. DESBOBINADORES ATT02 </li>
-                            <li> 1 und. MEIO LF04 </li>
-                            <li> 1 und. DESBOBINADORES TRELIÇA 3 </li>
-                            <li> 1 und. DESBOBINADORES TRELIÇA 4 </li>
-                            <li> 2 und. payoff E DESBOBINADORES ATT01 </li>
-                            <li> 1 und. DESBOBINADORES TELA MEP </li> 
-                        </ul>
-                        <a href="peca_MODE.html" target="_blank">
-                            <button>CODIGOS DE PEÇAS SAP MOD E</button>
-                        </a>
-                    </div>
-                </div>
-               <div>
-                    <h3>Imagem máquina de solda modelo S explodida </h3>
-                    <img src="images/Sexp.jpg" alt="" class="exploS">
-                    <h3>Maquina de solda SCHLATTER modelo S </h3>
-                    <a href="docs/modelo_s_portugues_1207.pdf" target="_blank"><button>DOCUMENTO PDF MAQ.SOLDA MOD S</button> </a>
-                    <p> NÃO ESTA SENDO UTILIZADO ESSE MODELO NO MOMENTO </p>
-                </div>
-                <h1>Melhorias aplicadas ao sistema </h1>
-                <div>
-                    <h2>Mordentes</h2>
-                    <h4>Ocorrencia/Dificuldade</h4>
-                    <p>Analises realizadas durente o tempo responsável pelas maquinas foi constatadas dificuldades em questão aos mordentes das máquinas modelo M, mordentes que de fabrica vem anexado a peça de numero 73 (encontradas na foto acima da maquina explodida), havia uma perda recorrente desta peça ocasionando na folga do mordente ocasionando no desbalanceamndo na hora da soldagem e por si efetuando uma má solda.</p>
-                    <h4>Solução Aplicada</h4>
-                    <p>Foi relizado de primeira mão uma solda de metal com o mesmo diametro da peça numero 73 diretamente no mordente, apos testes e constatar a melhora e resolução na folga do mordente foi feito desenho tecnico da peça e solicitado a oficina central a fabricação da peça de forma completa.</p>
-                    <a href="docs/MORDENTE 2.pdf" target="_blank"><button> Desenho Tec. Mordente novo </button></a>
-                </div>
-                <div> 
-                    <h2>Plano de inspeção das máquinas de solda</h2>
-                    <a href="docs/Plano de Inspeção de Máquinas de solda Schlatter modelos E e M.docx" target="_blank"> 
-                        <button> Plano de Inspeção máquinas de solda </button>
+  <div class="slider-container">
+    <div class="slides" id="slides">
+      <div class="slide slide2">
+      </div>
+        <div class="slide slide1">
+            <div class="div-left">
+                <h1>Modelo M</h1>
+                <p>As máquinas Modelo M são utilizadas para soldar arames a topo (Ø 4,0 - 10,0mm), ou seja, unir suas extremidades, principalmente na alimentação de linhas de trefilação e laminação, trabalhando com materiais como arames redondos, arames quadrados, ferro, aço, cobre, bronze, prata e outros metais não ferrosos, buscando a produção contínua.</p>
+                    <a href="/infomaq1/docs/Manual Mod M original.pdf" target="_blank">
+                        <button>Manual Mod M</button>
                     </a>
 
-                </div>
+                    <a href="peca_MODM.html" target="_blank">
+                        <button>CODIGOS DE PEÇAS SAP MOD M</button>
+                    </a>
+
+                    <a href="docs/Apostila Solda por Resistência a Topo - Curso A - 2023 - Máquina E e M.pdf" target="_blank">
+                        <button>Apostila Solda</button>
+                    </a>
+
+                <img src="/infomaq1/images/Mexp.jpg" alt="">
+            </div>
+
+            <div class="div-rigth">
+                <img src="/infomaq1/images/maq_mod_M.png" alt="">
             </div>
         </div>
+
+
+      <div class="slide slide3">
+        <div class="div-left">
+            <h1>Modelo E</h1>
+            <p>As máquinas Modelo E são utilizadas para soldar arames a topo (Ø1,0 - 8,0mm), ou seja, unir suas extremidades, principalmente na alimentação de linhas de trefilação e laminação, trabalhando com materiais como ferro, aço, cobre, latão, alumínio e aço metálico, buscando a produção contínua.</p>
+                <a href="/infomaq1/docs/modelo_e_portugues_1207.pdf" target="_blank">
+                    <button>Manual Mod E</button>
+                </a>
+
+                <a href="peca_MODE.html" target="_blank">
+                    <button>CODIGOS DE PEÇAS SAP MOD E</button>
+                </a>
+
+                <a href="docs/Apostila Solda por Resistência a Topo - Curso A - 2023 - Máquina E e M.pdf" target="_blank">
+                    <button>Apostila Solda</button>
+                </a>
+
+            <img src="/infomaq1/images/Eexp.jpg" alt="">
+        </div>
+
+        <div class="div-rigth">
+            <img src="/infomaq1/images/Maq_mod_E.png" alt="">
+        </div>
+      </div>
     </div>
+  </div>
 
+  <div class="buttons">
+    <button onclick="voltar()">Voltar</button>
+    <button onclick="avancar()">Avançar</button>
+  </div>
 
+  <script>
+    let slideAtual = 0;
+    const totalSlides = 3;
+    const slides = document.getElementById("slides");
+
+    function atualizarSlide() {
+      slides.style.transform = `translateX(-${slideAtual * 100}%)`;
+    }
+
+    function avancar() {
+      slideAtual = (slideAtual + 1) % totalSlides;
+      atualizarSlide();
+    }
+
+    function voltar() {
+      slideAtual = (slideAtual - 1 + totalSlides) % totalSlides;
+      atualizarSlide();
+    }
+  </script>
 
 </body>
 </html>
